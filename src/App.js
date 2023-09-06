@@ -1,35 +1,21 @@
 import './App.css';
-import ListAll from './components/ListAll';
-import CreateClient from './components/CreateClient';
+import ListAll from './pages/ListAll';
+import CreateClient from './pages/CreateClient';
+import Navbar from './components/Navbar';
 
-// import { useState, useEffect } from 'react';
-
-// const url = "http://localhost:8080/clientes";
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 function App() {
 
-  // const [clientes, setClientes] = useState([])
-
-  // useEffect(() => {
-
-  //   async function fetchData() {
-  //     const res = await fetch(url);
-
-  //     const data = await res.json();
-
-  //     setClientes(data);
-  //   }
-    
-  //   fetchData();
-  // }, []);
-
-  // console.log(clientes);
-
   return (
     <div className="App">
-      <h1>Fundamentos React</h1>
-      <ListAll />
-      <CreateClient />
+      <BrowserRouter>
+        <Navbar />
+        <Routes>
+          <Route path='/' element={<ListAll />} />
+          <Route path='/create' element={<CreateClient />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
