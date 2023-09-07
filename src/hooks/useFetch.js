@@ -8,6 +8,7 @@ export const useFetch = (url) => {
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
     const [clienteId, setClienteId] = useState(null);
+    const [data, setData] = useState(null);
 
     const httpConfig = (dados, method) => {
         if (method === "POST") {
@@ -29,6 +30,15 @@ export const useFetch = (url) => {
             })
             setMethod(method);
             setClienteId(dados);
+        } else if (method === "GET") {
+            setConfig({
+                method,
+                headers: {
+                    "Content-Type": "application/json",
+                }
+            })
+            setMethod(method);
+            setData(dados);
         }
     }
 
@@ -50,7 +60,7 @@ export const useFetch = (url) => {
 
         fetchData();
 
-    }, [url, callFetch]);
+    }, [url]);
 
     useEffect(() => {
         const httpRequest = async () => {
@@ -73,6 +83,19 @@ export const useFetch = (url) => {
                     setTimeout(function () {
                         window.location.reload();
                     }, 1000);
+                }
+            } else if (method === "GET") {
+                setError(null);
+                setLoading(true);
+                const searchUrl = `${url}/data/${data}`;
+                const res = await fetch(searchUrl, config);
+                json = await res.json();
+                setDados(json);
+                setLoading(false);
+                console.log(json);
+
+                if (json.length == 0){
+                    setError("Nenhum cliente encontrado para essa data de pagamento!");
                 }
             }
 

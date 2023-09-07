@@ -1,0 +1,55 @@
+.clientes {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f7f7f7;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.clientes li {
+    border: 1px solid #efefef;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    list-style: none;
+    margin: 5px px;
+    width: 25%;
+
+}
+
+.button button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    scale: 85%;
+}
+
+.button button.del {
+    background-color: red;
+}
+
+/* Estilizando o campo de entrada de data */
+.input-[type="date"] {
+    color: #333;
+}
+
+/* Estilizando o campo de entrada de data quando estiver em foco */
+.input-field[type="date"]:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Estilizando o campo de entrada de data quando hover */
+.input-field[type="date"]:hover {
+    border-color: #007bff;
+}

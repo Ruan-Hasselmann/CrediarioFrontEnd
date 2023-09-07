@@ -1,0 +1,93 @@
+/* Estilizando o container do formulário */
+.add-cliente {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f7f7f7;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilizando os rótulos dos campos */
+.formulario label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+/* Estilizando os campos de entrada de texto e seleção */
+.input-field,
+.select-field {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Estilizando o botão de envio */
+.container button, input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.formulario input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Estilizando mensagens de erro */
+h2 {
+    color: red;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+/* Estilizando o título do formulário */
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+/* Estilizando as colunas */
+.form-columns {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.column {
+    width: calc(25% - 20px);
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+/* Estilizando o campo de entrada de data */
+.input-field[type="date"] {
+    width: 20%;
+    color: #333;
+}
+
+/* Estilizando o campo de entrada de data quando estiver em foco */
+.input-field[type="date"]:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Estilizando o campo de entrada de data quando hover */
+.input-field[type="date"]:hover {
+    border-color: #007bff;
+}
+
+.info {
+    color: black;
+}

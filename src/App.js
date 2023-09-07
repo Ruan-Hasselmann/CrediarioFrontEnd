@@ -1,6 +1,13 @@
+//Styles
 import './App.css';
-import ListAll from './pages/ListAll';
-import CreateClient from './pages/CreateClient';
+
+//Pages
+import Home from './pages/Home';
+import CreateClient from './pages/create/CreateClient';
+import SearchClient from './pages/read/SearchClient';
+import UpdateClient from './pages/update/UpdateClient';
+
+//Components
 import Navbar from './components/Navbar';
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
@@ -12,8 +19,10 @@ function App() {
       <BrowserRouter>
         <Navbar />
         <Routes>
-          <Route path='/' element={<ListAll />} />
+          <Route path='/' element={<Home />} />
           <Route path='/create' element={<CreateClient />} />
+          <Route path='/search' element={<SearchClient />} />
+          <Route path='/update' element={<UpdateClient />} />
         </Routes>
       </BrowserRouter>
     </div>
