@@ -20,9 +20,9 @@ function App() {
         <Navbar />
         <Routes>
           <Route path='/' element={<Home />} />
-          <Route path='/create' element={<CreateClient />} />
+          {/* <Route path='/create' element={<CreateClient />} />
           <Route path='/search' element={<SearchClient />} />
-          <Route path='/update' element={<UpdateClient />} />
+          <Route path='/update' element={<UpdateClient />} /> */}
         </Routes>
       </BrowserRouter>
     </div>
