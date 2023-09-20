@@ -92,7 +92,6 @@ export const useFetch = (url) => {
                 json = await res.json();
                 setDados(json);
                 setLoading(false);
-                console.log(json);
 
                 if (json.length == 0){
                     setError("Nenhum cliente encontrado para essa data de pagamento!");

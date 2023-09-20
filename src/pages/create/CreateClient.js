@@ -66,12 +66,10 @@ const CreateClient = () => {
     function buscaCep(){
         if (endereco.cep.length >= 8) {
             let cep = `http://viacep.com.br/ws/${endereco.cep}/json/`
-            console.log(cep);
             const fetchData = async () => {
 
                 const res = await fetch(cep);
                 const json = await res.json();
-                console.log(json);
                 setEndereco({ ...endereco, logradouro: json.logradouro, bairro: json.bairro, cidade: json.localidade, estado: json.uf });
             }
 
@@ -80,7 +78,6 @@ const CreateClient = () => {
     }
 
     function atualizarCep(dado) {
-        console.log(dado)
         setEndereco({ ...endereco, cep: dado});
     }
 
